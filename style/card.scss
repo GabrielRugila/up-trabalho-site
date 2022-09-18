@@ -1,0 +1,49 @@
+@use 'fonts.scss';
+@use 'colours.scss';
+@import 'colours.scss';
+
+//.card (div)
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  @media (min-width: 48rem) {
+    gap: 1.5rem;
+    font-size: 1.25rem;
+  }
+}
+.card {
+  margin-top: 2rem;
+}
+
+//.card-img (img)
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 0.1rem solid $Secondary;
+  border-radius: 0.8rem 0.8rem 0 0;
+  @media (min-width: 48rem) {
+    padding: 0.4rem;
+  }
+}
+//.card-text (h4)
+.card-txt {
+  max-width: 25rem;
+  border: 0.1rem solid $Secondary;
+  border-radius: 0 0 0.8rem 0.8rem;
+  background-color: $Secondary;
+  color: $Primary;
+  flex-wrap: wrap;
+  @media (min-width: 48rem) {
+    padding: 0.4rem;
+  }
+}
+
+//card-desc (p)
+.card-desc {
+  flex-wrap: wrap;
+}

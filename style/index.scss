@@ -1,0 +1,374 @@
+@use 'fonts.scss';
+@use 'colours.scss';
+@use 'card.scss';
+@import 'colours.scss';
+@import 'card.scss';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  height: 100vh;
+  background-color: $Primary;
+  font-family: 'Pathway Gothic One', sans-serif;
+  font-size: 1.25rem;
+}
+// dom js sb
+.hidden {
+  display: none;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #db252c3d;
+  -webkit-backdrop-filter: blur(0.1875rem);
+  backdrop-filter: blur(0.1875rem);
+  z-index: 5;
+}
+
+.logo {
+  padding: 0.3rem;
+  width: 100%;
+  font-family: 'Kaoly';
+  font-size: 3rem;
+  color: $Primary;
+  background-color: $Secondary;
+  @media (min-width: 48rem) {
+    font-size: 4rem;
+  }
+}
+.logo-box {
+  button {
+    position: absolute;
+    top: 3vh;
+    right: 0.3rem;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: none;
+  }
+}
+.logo:hover {
+  color: $Tertiary;
+}
+.links,
+.sidelinks {
+  list-style-type: none;
+  color: $Secondary;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar {
+  position: fixed;
+  padding: 2rem;
+  top: 45%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 30vh;
+
+  padding: 6rem;
+  border-radius: 5px;
+  z-index: 10;
+  @media (min-width: 48rem) {
+    top: 45%;
+    left: 93%;
+    width: 50vh;
+  }
+}
+.brg-btn {
+  width: 3rem;
+}
+
+.links {
+  margin: 1rem;
+  padding: 0.25rem;
+  border-radius: 0.6rem 0 0 0.6rem;
+  background-color: $Secondary;
+  font-size: 1.3rem;
+  @media (min-width: 48rem) {
+    font-size: 2rem;
+    padding: 0.35rem;
+  }
+}
+li {
+  margin: 0.3rem 0;
+  padding: 1rem 0.6rem 1rem 0;
+  color: $Primary;
+  a:hover {
+    color: $Tertiary;
+    text-shadow: 3rem lighten($Tertiary, 20%);
+  }
+}
+.show-sidebar:hover {
+  cursor: pointer;
+}
+.close-sidebar {
+  position: relative;
+  left: 55%;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: $Primary;
+}
+.close-sidebar:hover {
+  color: $Tertiary;
+}
+
+///////////////////////////////////////
+
+.form-body {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+  padding: 3rem;
+  border-radius: 1rem;
+  color: $Primary;
+  background-color: #f8f3e38c;
+  box-shadow: 0.3rem 0 0.3rem 0.1rem rgba(255, 255, 255, 0.301);
+  text-align: start;
+  @media (min-width: 48rem) {
+    margin: 1rem;
+    padding: 3rem;
+  }
+}
+.signup-l {
+  margin: 0.2rem 0 0.2rem 0;
+  font-size: 1.25rem;
+  @media (min-width: 48rem) {
+    font-size: 1.8rem;
+  }
+}
+.signup-i {
+  border: none;
+  border-radius: 0.5rem;
+  width: 15rem;
+  height: 1.5rem;
+  padding-left: 0.5rem;
+  @media (min-width: 48rem) {
+    width: 16rem;
+    height: 1.8rem;
+  }
+}
+select {
+  border: none;
+  border-radius: 0.5rem;
+  width: 15.5rem;
+  height: 1.5rem;
+  @media (min-width: 48rem) {
+    width: 16.6rem;
+    height: 1.8rem;
+  }
+}
+.btn-submit {
+  border: none;
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 0.2rem;
+  width: 15.6rem;
+  height: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0.3rem 0 0.3rem lighten($Primary, 20%);
+  @media (min-width: 48rem) {
+    padding: 0.6rem;
+    width: 16.6rem;
+    height: 1.8rem;
+    box-shadow: 0 0.4rem 0 0.4rem lighten($Primary, 20%);
+  }
+}
+
+.btn-submit:hover {
+  outline: none;
+  box-shadow: 0 0.2rem 0 0.2rem lighten($Primary, 20%);
+  @media (min-width: 48rem) {
+    outline: none;
+    box-shadow: 0 0.3rem 0 0.3rem lighten($Primary, 20%);
+  }
+}
+.btn-submit:active {
+  outline: none;
+  box-shadow: 0 0.1rem 0 0.1rem $Primary;
+  @media (min-width: 48rem) {
+    outline: none;
+    box-shadow: 0 0.15rem 0 0.15rem lighten($Primary, 20%);
+  }
+}
+
+.signup-opt {
+  margin: 0.5rem;
+  font-size: 1rem;
+}
+
+///////////////////////////////
+// login
+
+.form-login {
+  display: flex;
+  flex-direction: column;
+}
+.remember {
+  margin: 1rem 0;
+}
+.login-i {
+  border: none;
+  border-radius: 0.5rem;
+  width: 15rem;
+  height: 1.5rem;
+  padding-left: 0.5rem;
+  @media (min-width: 48rem) {
+    width: 16rem;
+    height: 1.8rem;
+  }
+}
+.login-l {
+  margin: 0.2rem 0 0.2rem 0;
+  font-size: 1.25rem;
+  @media (min-width: 48rem) {
+    font-size: 1.8rem;
+  }
+}
+.password {
+  margin: 0;
+}
+.psw {
+  color: $Tertiary;
+  font-weight: bold;
+}
+
+//////////////////////////////
+// contact
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin: 1rem;
+}
+
+.show-sup {
+  border: none;
+  border-radius: 2.5rem;
+  margin-top: 1rem;
+  padding: 3rem;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0.3rem 0 0.3rem lighten($Primary, 20%);
+  @media (min-width: 48rem) {
+    box-shadow: 0 0.4rem 0 0.4rem lighten($Primary, 20%);
+  }
+}
+.show-sup:hover {
+  outline: none;
+  box-shadow: 0 0.2rem 0 0.2rem lighten($Primary, 20%);
+  @media (min-width: 48rem) {
+    outline: none;
+    box-shadow: 0 0.3rem 0 0.3rem lighten($Primary, 20%);
+  }
+}
+.show-sup:active {
+  outline: none;
+  box-shadow: 0 0.1rem 0 0.1rem lighten($Primary, 20%);
+  @media (min-width: 48rem) {
+    outline: none;
+    box-shadow: 0 0.15rem 0 0.15rem lighten($Primary, 20%);
+  }
+}
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.close-sup {
+  position: absolute;
+  top: 1.2rem;
+  right: 2rem;
+  font-size: 5rem;
+  color: $Secondary;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+.close-sup:hover {
+  color: $Tertiary;
+}
+
+.sup {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  color: $Secondary;
+  background-color: $Primary;
+  padding: 6rem;
+  border-radius: 1rem;
+  box-shadow: 0 3rem 5rem $Tertiary;
+  z-index: 10;
+}
+
+.contact-i,
+.description {
+  width: 100%;
+  padding: 0.8rem 1.25rem;
+  margin: 0.5rem 0;
+  display: flex;
+  border: none;
+  border-radius: 0.6rem;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.6980392157);
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.contact-i:hover,
+.description:hover {
+  border: 0.1rem solid $Tertiary;
+}
+
+.description {
+  height: 10rem;
+}
+
+.btn-send {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin: 0.2rem;
+  border: none;
+  border-radius: 0.6rem;
+  color: $Primary;
+  background: $Secondary;
+  box-shadow: 0 0.3rem 0 0.3rem lighten($Primary, 20%);
+  @media (min-width: 48rem) {
+    box-shadow: 0 0.3rem 0 0.3rem lighten($Primary, 20%);
+  }
+}
+
+.btn-send:hover {
+  color: $Tertiary;
+  box-shadow: 0 0.2rem 0 0.2rem lighten($Primary, 20%);
+  @media (min-width: 48rem) {
+    box-shadow: 0 0.15rem 0 0.15rem lighten($Primary, 20%);
+  }
+}
+
+.btn-send:active {
+  color: lighten($Tertiary, 10%);
+  box-shadow: 0 0.1rem 0 0.1rem lighten($Primary, 20%);
+  @media (min-width: 48rem) {
+    box-shadow: 0 0.15rem 0 0.15rem lighten($Primary, 20%);
+  }
+}
