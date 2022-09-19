@@ -31,13 +31,13 @@
             <a href="history.html">Nossa Historia</a>
           </li>
           <li class="sidebarLinks">
-            <a href="support.html">Suporte</a>
+            <a href="support.php">Suporte</a>
           </li>
           <li class="sidebarLinks">
-            <a href="signup.html">Sign-Up</a>
+            <a href="signup.php">Sign-Up</a>
           </li>
           <li class="sidebarLinks">
-            <a href="login.html">Login</a>
+            <a href="login.php">Login</a>
           </li>
         </ul>
       </div>
